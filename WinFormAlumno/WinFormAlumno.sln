@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.27703.2035
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormAlumno", "WinFormAlumno\WinFormAlumno.csproj", "{B7A92DC9-92A5-4CEF-9C93-7C340D694FD5}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WinFormAlumno.Integratios.Tests", "WinFormAlumno.Integratios.Tests\WinFormAlumno.Integratios.Tests.csproj", "{6F30DD39-AEC3-47F7-BD43-8584FC9A36B2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WinFormAlumno.Integration.Tests", "WinFormAlumno.Integratios.Tests\WinFormAlumno.Integration.Tests.csproj", "{6F30DD39-AEC3-47F7-BD43-8584FC9A36B2}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WinFormAlumno.Unit.Tests", "WinFormAlumno.Unit.Tests\WinFormAlumno.Unit.Tests.csproj", "{EB1179A8-4DD2-4D2F-B373-6E0F931733FA}"
 EndProject

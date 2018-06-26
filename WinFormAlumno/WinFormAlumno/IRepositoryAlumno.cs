@@ -5,8 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace WinFormAlumno {
-    public interface IHerramienta {
-        string AddAlumno(Alumno alumno);
-        Alumno LoadAlumno();
+    public interface IRepositoryAlumno {
+        Alumno AddAlumno(Alumno alumno);
+        //Alumno LoadAlumno();
     }
 }

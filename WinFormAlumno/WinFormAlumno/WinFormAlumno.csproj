@@ -60,10 +60,9 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Herramienta.cs" />
-    <Compile Include="IAlumno.cs" />
+    <Compile Include="RepositoryAlumno.cs" />
     <Compile Include="IEquatable.cs" />
-    <Compile Include="IHerramienta.cs" />
+    <Compile Include="IRepositoryAlumno.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
