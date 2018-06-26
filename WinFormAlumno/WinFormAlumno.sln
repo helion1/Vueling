@@ -5,9 +5,25 @@ VisualStudioVersion = 15.0.27703.2035
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormAlumno", "WinFormAlumno\WinFormAlumno.csproj", "{B7A92DC9-92A5-4CEF-9C93-7C340D694FD5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormAlumno.Integratios.Tests", "WinFormAlumno.Integratios.Tests\WinFormAlumno.Integratios.Tests.csproj", "{6F30DD39-AEC3-47F7-BD43-8584FC9A36B2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WinFormAlumno.Integratios.Tests", "WinFormAlumno.Integratios.Tests\WinFormAlumno.Integratios.Tests.csproj", "{6F30DD39-AEC3-47F7-BD43-8584FC9A36B2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormAlumno.Unit.Tests", "WinFormAlumno.Unit.Tests\WinFormAlumno.Unit.Tests.csproj", "{EB1179A8-4DD2-4D2F-B373-6E0F931733FA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WinFormAlumno.Unit.Tests", "WinFormAlumno.Unit.Tests\WinFormAlumno.Unit.Tests.csproj", "{EB1179A8-4DD2-4D2F-B373-6E0F931733FA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.Presentation TIER", "1.Presentation TIER", "{16B73EF0-FDBE-41D4-885C-21887C489805}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.1 Web aplication LAYER", "1.1 Web aplication LAYER", "{DCCBFB87-8F61-4B57-B22E-9F67C6B73D96}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.2 Config files", "1.2 Config files", "{E72967BE-A1F6-4E33-A2D7-3530518C417C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4. Domain TIER", "4. Domain TIER", "{A4D34AAF-E094-4592-A8E4-C5A7446A43E5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5. Infrastructure TIER", "5. Infrastructure TIER", "{495A9CE8-E91F-4510-BD7E-66843A27D861}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.1. Domain Entities", "4.1. Domain Entities", "{05E418F4-1498-4342-B137-643481B12260}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3. Application TIER", "3. Application TIER", "{3720B8C5-F26C-4C6A-9A97-A19EE70D137C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.1. Contracts", "3.1. Contracts", "{135CF566-EA2A-42A8-8D92-4381F5FD90E8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -30,6 +46,12 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DCCBFB87-8F61-4B57-B22E-9F67C6B73D96} = {16B73EF0-FDBE-41D4-885C-21887C489805}
+		{E72967BE-A1F6-4E33-A2D7-3530518C417C} = {16B73EF0-FDBE-41D4-885C-21887C489805}
+		{05E418F4-1498-4342-B137-643481B12260} = {A4D34AAF-E094-4592-A8E4-C5A7446A43E5}
+		{135CF566-EA2A-42A8-8D92-4381F5FD90E8} = {3720B8C5-F26C-4C6A-9A97-A19EE70D137C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {132CC288-646B-40E4-9DA7-4CBA7E131288}
