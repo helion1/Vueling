@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WinFormAlumno.Integration.T
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WinFormAlumno.Unit.Tests", "WinFormAlumno.Unit.Tests\WinFormAlumno.Unit.Tests.csproj", "{EB1179A8-4DD2-4D2F-B373-6E0F931733FA}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.Presentation TIER", "1.Presentation TIER", "{16B73EF0-FDBE-41D4-885C-21887C489805}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. Presentation TIER", "1. Presentation TIER", "{16B73EF0-FDBE-41D4-885C-21887C489805}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.1 Web aplication LAYER", "1.1 Web aplication LAYER", "{DCCBFB87-8F61-4B57-B22E-9F67C6B73D96}"
 EndProject
