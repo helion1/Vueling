@@ -16,16 +16,14 @@ namespace PooVueling.Tests
         [DataRow(4,2,2)]
         [DataRow(9,3,3)]
         [DataTestMethod]
-        public void DivisionTest(int num1, int num2, int resultado)
-        {
+        public void DivisionTest(int num1, int num2, int resultado){
             Assert.IsTrue(iCalculadora.Division(num1, num2) == resultado);
         }
 
         [DataRow(4, 2, 8)]
         [DataRow(6, 3, 18)]
         [DataTestMethod]
-        public void MultiplicacionTest(int num1, int num2, int resultado)
-        {
+        public void MultiplicacionTest(int num1, int num2, int resultado){
             Assert.IsTrue(iCalculadora.Multiplicacion(num1, num2) == resultado);
         }
 
