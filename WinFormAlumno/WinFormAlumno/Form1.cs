@@ -24,15 +24,33 @@ namespace WinFormAlumno {
             RepositoryAlumno repositoryAlumno = new RepositoryAlumno();
 
             //MONTO EL OBJETO ALUMNO CON LOS DATOS DEL FORM
-            Alumno alumno = new Alumno( Convert.ToInt32(id.Text),
+            Alumno alumno = new Alumno(Convert.ToInt32(id.Text),
                                                 nombre.Text,
                                                 apellidos.Text,
                                                 dni.Text);
 
             //CREAMOS FICHERO alumno.json
-            repositoryAlumno.AddAlumno(alumno);
+            repositoryAlumno.AddAlumno(alumno, path);
 
         }
+
+
+        private void label2_Click(object sender, EventArgs e) {
+
+        }
+
+        private void id_TextChanged(object sender, EventArgs e) {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e) {
+
+        }
+
+        private void rutaGuardadoToolStripMenuItem_Click(object sender, EventArgs e) {
+
+        }
+       
 
         private void appconfigToolStripMenuItem_Click(object sender, EventArgs e) {
             if (path != ConfigurationManager.AppSettings.Get("pathJsonAlumno")) {

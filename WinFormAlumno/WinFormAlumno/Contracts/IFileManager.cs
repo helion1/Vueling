@@ -5,7 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace WinFormAlumno.Contracts {
-    interface IFileManager {
-        bool createJsonToFile(string path, string json); 
+    public interface IFileManager {
+        void CreateJsonToFile(string path, string json);
+        string LoadJsonFile(string path);
     }
 }
