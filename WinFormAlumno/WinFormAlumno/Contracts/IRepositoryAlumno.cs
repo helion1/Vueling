@@ -7,6 +7,5 @@ using System.Threading.Tasks;
 namespace WinFormAlumno {
     public interface IRepositoryAlumno {
         Alumno AddAlumno(Alumno alumno);
-        //Alumno LoadAlumno();
     }
 }

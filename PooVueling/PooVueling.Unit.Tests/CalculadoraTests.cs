@@ -30,7 +30,7 @@ namespace PooVueling.Tests
         [TestMethod()]
         public void DivisionTest()
         {
-            //log4net.AssemblyInfo("hola");
+            //log4net.AssemblyInfo("holas");
             var result = mockObject.Division(4, 2);
             Assert.AreEqual(2, result);
         }
