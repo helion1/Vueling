@@ -11,6 +11,10 @@ namespace Facade.Vehycle.SubClases {
         public int seating;
         public int cc;
 
+        public BigCar() {
+
+        }
+
         public BigCar(int doors, int seating, int cc) {
             this.doors = doors;
             this.seating = seating;
