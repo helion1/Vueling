@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{95A71F19-E356-444E-B74B-9CC4F7918653}</ProjectGuid>
+    <ProjectGuid>{FD5B4D10-32A9-4B97-AEA7-BD0612CC25BC}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Facade</RootNamespace>
-    <AssemblyName>Facade</AssemblyName>
+    <RootNamespace>Automapper</RootNamespace>
+    <AssemblyName>Automapper</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -49,11 +49,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="SubClases\BigCar.cs" />
-    <Compile Include="Facade\FacadeV.cs" />
-    <Compile Include="Contracts\IVehicle.cs" />
-    <Compile Include="SubClases\LittleCar.cs" />
-    <Compile Include="SubClases\Minivan.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
