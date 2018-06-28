@@ -12,17 +12,19 @@ namespace Facade {
         static void Main(string[] args) {
             FacadeV facade = new FacadeV();
 
-            facade.ShowCars();
-            facade.ShowVehicles();
+            //facade.ShowCars();
+            //facade.ShowVehicles();
 
+            //Cargas assembly en mmeoria ram
             Assembly myAssembly = typeof(Program).Assembly;
-            Type littleCarType = myAssembly.GetType("Reflection.LittleCar");
+            //Cargas clase en memoria ram
+            Type littleCarType = myAssembly.GetType("Facade.LittleCar");
 
+            //Creas objeto en la Ram
             object littleCar = Activator.CreateInstance(littleCarType, 3, 5, 1000);
-            Console.WriteLine(((LittleCar)littleCar).cc);
-
-
-
+            //Casteas de objeto a LittleCar en una variable
+            LittleCar coche = (LittleCar)littleCar;
+            Console.WriteLine(coche.cc);
 
         }
     }
