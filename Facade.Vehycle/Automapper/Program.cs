@@ -19,13 +19,15 @@ namespace Automapper {
         public string FullName { get; set; }
         public string Address { get; set; }
         public int Age { get; set; }
+        public DateTime Birthdate { get; set; }
     }
 
     public class EjmAutomapper {
         static void Main(string[] args) {
             var config = new MapperConfiguration(cfg => cfg.CreateMap<Modelo1, Modelo2>()
             .ForMember(dest => dest.FullName, sou => sou.ResolveUsing(entity => entity.FirstName + " " + entity.LastName))
-            .ForMember(dest => dest.Age, sou => sou.ResolveUsing(entity => DateTime.Today.AddTicks(-entity.Birthdate.Ticks).Year - 1)));
+            .ForMember(dest => dest.Age, sou => sou.ResolveUsing(entity => DateTime.Today.AddTicks(-entity.Birthdate.Ticks).Year - 1))
+            .ForMember(dest => dest.Birthdate, opt => opt.Ignore())); 
             IMapper iMapper = config.CreateMapper();
 
             var source = new Modelo1 {
