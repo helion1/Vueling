@@ -11,31 +11,35 @@ namespace Automapper {
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Address { get; set; }
+        public DateTime Birthdate { get; set; }
     }
 
     public class Modelo2 {
         public int Id { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
+        public string FullName { get; set; }
         public string Address { get; set; }
+        public int Age { get; set; }
     }
 
     public class EjmAutomapper {
         static void Main(string[] args) {
-            var config = new MapperConfiguration(cfg => cfg.CreateMap<Modelo1, Modelo2>());
+            var config = new MapperConfiguration(cfg => cfg.CreateMap<Modelo1, Modelo2>()
+            .ForMember(dest => dest.FullName, sou => sou.ResolveUsing(entity => entity.FirstName + " " + entity.LastName))
+            .ForMember(dest => dest.Age, sou => sou.ResolveUsing(entity => DateTime.Today.AddTicks(-entity.Birthdate.Ticks).Year - 1)));
             IMapper iMapper = config.CreateMapper();
 
-            var source = new Modelo1();
-
-            source.Id = 1;
-            source.FirstName = "Carlos";
-            source.LastName = "Lopez";
-            source.Address = "Castelldefels";
+            var source = new Modelo1 {
+                Id = 1,
+                FirstName = "Carlos",
+                LastName = "Lopez",
+                Address = "Castelldefels",
+                Birthdate = new DateTime(2000, 1, 25)
+            };
 
             var destino = iMapper.Map<Modelo1, Modelo2>(source);
 
             Console.WriteLine(destino.GetType());
-            Console.WriteLine("Author Name: " + destino.FirstName + " " + destino.LastName);
+            Console.WriteLine("Author Name: " + destino.FullName + "\nEdad:" + destino.Age);
             Console.ReadLine();
         }
     }
