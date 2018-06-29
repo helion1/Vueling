@@ -14,20 +14,45 @@ namespace Facade {
     class Program {
         static void Main(string[] args) {
             FacadeV facade = new FacadeV();
-            LittleCar c1 = new LittleCar(3, 4, 1200);
 
             facade.ShowCars();
             facade.ShowVehicles();
 
-            //Como serializar un objeto a XML. Pero no tiene mucho sentido aquí.
+
+
+//-------------------------------------------------------------------------------------------
+//                          PARTE XML y REFLECTION
+//-------------------------------------------------------------------------------------------
+            LittleCar c1 = new LittleCar(3, 4, 1200);
+            //Como serializar un objeto a XML. Pero no tiene mucho sentido aquí. 
             /*
+
             try {
                 XmlSerializer serializer = new XmlSerializer(typeof(LittleCar));
                 FileStream fStream = File.Open(path, FileMode.Create);
                 serializer.Serialize(fStream, c1);
                 fStream.Close();
             } catch (Exception) {
+
             }*/
+
+//                    ------> CONTENIDO XML <-----
+
+            /*
+            <? xml version = "1.0" ?>
+                -< Object >
+                    -< Namespace >
+                         < name > Facade.Vehycle.SubClases.</ name >
+                    </ Namespace >
+                    -< Class >
+                         < name > LittleCar </ name >
+                    </ Class >
+                </ Object >
+            */
+
+
+//                    ------> REFLECTION <-----
+
 
             XmlDocument doc = new XmlDocument();
             doc.Load("datos.xml");

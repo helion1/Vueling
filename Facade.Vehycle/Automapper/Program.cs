@@ -27,7 +27,7 @@ namespace Automapper {
             var config = new MapperConfiguration(cfg => cfg.CreateMap<Modelo1, Modelo2>()
             .ForMember(dest => dest.FullName, sou => sou.ResolveUsing(entity => entity.FirstName + " " + entity.LastName))
             .ForMember(dest => dest.Age, sou => sou.ResolveUsing(entity => DateTime.Today.AddTicks(-entity.Birthdate.Ticks).Year - 1))
-            .ForMember(dest => dest.Birthdate, opt => opt.Ignore())); 
+            .ForMember(dest => dest.Birthdate, sou => sou.Ignore())); 
             IMapper iMapper = config.CreateMapper();
 
             var source = new Modelo1 {
@@ -44,6 +44,7 @@ namespace Automapper {
             Console.WriteLine(destino.GetType());
             Console.WriteLine("Author Name: " + destino.FullName + "\nEdad:" + destino.Age);
             Console.ReadLine();
+            
         }
     }
 }
