@@ -1,12 +1,14 @@
 ﻿using Facade.Vehicle.Contracts;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Facade.Vehycle.SubClases {
-    public class LittleCar : IVehicle {
+    [Serializable()]
+    public class LittleCar : IVehicle, System.ComponentModel.INotifyPropertyChanged {
         public int Doors { get; set; }
         public int Seating { get; set; }
         public int Cc { get; set; }
@@ -19,6 +21,8 @@ namespace Facade.Vehycle.SubClases {
             this.Seating = seating;
             this.Cc = cc;
         }
+
+        public event PropertyChangedEventHandler PropertyChanged;
 
         public string Description() {
             return String.Concat(
