@@ -25,7 +25,6 @@ namespace Facade {
             //Casteas de objeto a LittleCar en una variable
             LittleCar coche = (LittleCar)littleCar;
             Console.WriteLine(coche.Cc);
-
         }
     }
 }
