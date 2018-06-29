@@ -13,8 +13,10 @@ using System.Xml.Serialization;
 namespace Facade {
     class Program {
         static void Main(string[] args) {
+            //-------------------------------------------------------------------------------------------
+            //                          PARTE FACADE
+            //-------------------------------------------------------------------------------------------
             FacadeV facade = new FacadeV();
-
             facade.ShowCars();
             facade.ShowVehicles();
 
