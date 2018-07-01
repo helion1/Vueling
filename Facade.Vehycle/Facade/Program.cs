@@ -8,6 +8,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
+using System.Xml.Linq;
 using System.Xml.Serialization;
 
 namespace Facade {
@@ -30,24 +31,33 @@ namespace Facade {
 
             XmlDocument doc = new XmlDocument();
             doc.Load("ReflectionConfiguration.xml");
-//--------------------  XML  OPCION 1 -----------------------------------------------------------
+            //--------------------  XML  OPCION 1 - Xpath -----------------------------------------------------------
             //Recogemos del XML el namespace y la clase
-            XmlNodeList elemList = doc.GetElementsByTagName("Namespace");
+            
+            XmlNodeList elemList = doc.GetElementsByTagName("Type");
             string ns = elemList[0].InnerText;
 
-            elemList = doc.GetElementsByTagName("Class");
-            string cls = elemList[0].InnerText;
-
-//-------------------  XML  OPCION 2 -------------------------------------------------------
-/*
+            /*
             XmlNode root = doc.DocumentElement;
             XmlNode node = root.SelectSingleNode("Types/Type:id='LittleCar'");
             Console.WriteLine(node.InnerText);
-*/
+            */
+
+            //-------------------  XML  OPCION 2 LINQ-------------------------------------------------------
+            XElement root = XElement.Load("ReflectionConfiguration.xml");
+            IEnumerable<XElement> tests =
+                from el in root.Elements("Type")
+                where (string)el.Attribute("id") == "LittleCar"
+                select el;
+
+            string cadena = tests.First().Value;
+            Console.WriteLine(cadena);
+            //------------------------------------------------------------------------
+
             //Cargas assembly en mmeoria ram
             Assembly myAssembly = typeof(Program).Assembly;
             //Cargas clase en memoria ram
-            Type littleCarType = myAssembly.GetType(ns+cls);
+            Type littleCarType = myAssembly.GetType(ns);
 
             //Creas objeto en la Ram
             object littleCar = Activator.CreateInstance(littleCarType, 3, 5, 1000);
