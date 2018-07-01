@@ -25,40 +25,12 @@ namespace Facade {
 //-------------------------------------------------------------------------------------------
 //                          PARTE XML y REFLECTION
 //-------------------------------------------------------------------------------------------
-            LittleCar c1 = new LittleCar(3, 4, 1200);
-            //Como serializar un objeto a XML. Pero no tiene mucho sentido aquí. 
-            /*
-
-            try {
-                XmlSerializer serializer = new XmlSerializer(typeof(LittleCar));
-                FileStream fStream = File.Open(path, FileMode.Create);
-                serializer.Serialize(fStream, c1);
-                fStream.Close();
-            } catch (Exception) {
-
-            }*/
-
-//                    ------> CONTENIDO XML <-----
-
-            /*
-            <? xml version = "1.0" ?>
-                -< Object >
-                    -< Namespace >
-                         < name > Facade.Vehycle.SubClases.</ name >
-                    </ Namespace >
-                    -< Class >
-                         < name > LittleCar </ name >
-                    </ Class >
-                </ Object >
-            */
-
-
 //                    ------> REFLECTION <-----
 
 
             XmlDocument doc = new XmlDocument();
-            doc.Load("datos.xml");
-
+            doc.Load("ReflectionConfiguration.xml");
+//--------------------  XML  OPCION 1 -----------------------------------------------------------
             //Recogemos del XML el namespace y la clase
             XmlNodeList elemList = doc.GetElementsByTagName("Namespace");
             string ns = elemList[0].InnerText;
@@ -66,6 +38,12 @@ namespace Facade {
             elemList = doc.GetElementsByTagName("Class");
             string cls = elemList[0].InnerText;
 
+//-------------------  XML  OPCION 2 -------------------------------------------------------
+/*
+            XmlNode root = doc.DocumentElement;
+            XmlNode node = root.SelectSingleNode("Types/Type:id='LittleCar'");
+            Console.WriteLine(node.InnerText);
+*/
             //Cargas assembly en mmeoria ram
             Assembly myAssembly = typeof(Program).Assembly;
             //Cargas clase en memoria ram

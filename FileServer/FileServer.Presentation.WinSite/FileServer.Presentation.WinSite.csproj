@@ -75,5 +75,15 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FileServer.Common.Model\FileServer.Common.Model.csproj">
+      <Project>{1bb42f24-a9ae-4843-a795-9d167a7a85b0}</Project>
+      <Name>FileServer.Common.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FileServer.Infrastructure.Respository\FileServer.Infrastructure.Respository.csproj">
+      <Project>{23056a96-0e83-472b-bf3a-38793b21d7e1}</Project>
+      <Name>FileServer.Infrastructure.Respository</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
