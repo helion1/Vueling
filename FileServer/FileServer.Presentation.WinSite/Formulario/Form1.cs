@@ -53,16 +53,16 @@ namespace WinFormAlumno {
         }
        
 
-        private void AppconfigToolStripMenuItem_Click(object sender, EventArgs e) {
+        private void appconfigToolStripMenuItem_Click(object sender, EventArgs e) {
             if (path != ConfigurationManager.AppSettings.Get("pathJsonAlumno")) {
                 path = ConfigurationManager.AppSettings.Get("pathJsonAlumno");
             }
 
         }
 
-        private void VariableEntornoToolStripMenuItem_Click(object sender, EventArgs e) {
-            if (path != Environment.GetEnvironmentVariable("ruta")) {
-                path = Environment.GetEnvironmentVariable("ruta");
+        private void variableEntornoToolStripMenuItem_Click(object sender, EventArgs e) {
+            if (path != Environment.GetEnvironmentVariable("vueling_home")) {
+                path = Environment.GetEnvironmentVariable("vueling_home");
             }
         }
     }
