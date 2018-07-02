@@ -33,6 +33,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -48,11 +49,14 @@
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
+    <Compile Include="Form1.designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -79,6 +83,10 @@
     <ProjectReference Include="..\FileServer.Common.Model\FileServer.Common.Model.csproj">
       <Project>{1bb42f24-a9ae-4843-a795-9d167a7a85b0}</Project>
       <Name>FileServer.Common.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FileServer.Common.Utils\FileServer.Common.Utils.csproj">
+      <Project>{73358d53-57ed-4f6a-8ac6-f97931a46ed3}</Project>
+      <Name>FileServer.Common.Utils</Name>
     </ProjectReference>
     <ProjectReference Include="..\FileServer.Infrastructure.Respository\FileServer.Infrastructure.Respository.csproj">
       <Project>{23056a96-0e83-472b-bf3a-38793b21d7e1}</Project>

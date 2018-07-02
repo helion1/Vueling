@@ -7,6 +7,6 @@ using System.Threading.Tasks;
 
 namespace FileServer.Infrastructure.Respository.Contracts {
     public interface IAlumnoRepository {
-        Alumno Add(Alumno alumno);
+        Alumno Add(Alumno alumno, string path);
     }
 }

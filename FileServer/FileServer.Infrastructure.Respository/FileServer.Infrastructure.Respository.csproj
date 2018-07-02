@@ -30,6 +30,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -41,14 +44,22 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Contracts\IAlumnoRepository.cs" />
+    <Compile Include="Contracts\IEquatable.cs" />
+    <Compile Include="Contracts\IFileManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\AlumnoRepository.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FileServer.Common.Model\FileServer.Common.Model.csproj">
       <Project>{1bb42f24-a9ae-4843-a795-9d167a7a85b0}</Project>
       <Name>FileServer.Common.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FileServer.Common.Utils\FileServer.Common.Utils.csproj">
+      <Project>{73358d53-57ed-4f6a-8ac6-f97931a46ed3}</Project>
+      <Name>FileServer.Common.Utils</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
