@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Xml;
 using System.Xml.Linq;
 using System.Xml.Serialization;
+using System.Xml.XPath;
 
 namespace Facade {
     class Program {
@@ -37,11 +38,13 @@ namespace Facade {
             XmlNodeList elemList = doc.GetElementsByTagName("Type");
             string ns = elemList[0].InnerText;
 
-            /*
-            XmlNode root = doc.DocumentElement;
-            XmlNode node = root.SelectSingleNode("Types/Type:id='LittleCar'");
-            Console.WriteLine(node.InnerText);
-            */
+
+            XPathNavigator nav = doc.CreateNavigator();
+            
+            //XmlNode root2 = doc.DocumentElement;
+            XPathNavigator node = nav.SelectSingleNode("/Types/Type[@id='LittleCar']");
+            Console.WriteLine(node.ToString());
+            
 
             //-------------------  XML  OPCION 2 LINQ-------------------------------------------------------
             XElement root = XElement.Load("ReflectionConfiguration.xml");
@@ -57,7 +60,7 @@ namespace Facade {
             //Cargas assembly en mmeoria ram
             Assembly myAssembly = typeof(Program).Assembly;
             //Cargas clase en memoria ram
-            Type littleCarType = myAssembly.GetType(ns);
+            Type littleCarType = myAssembly.GetType(node.ToString());
 
             //Creas objeto en la Ram
             object littleCar = Activator.CreateInstance(littleCarType, 3, 5, 1000);
