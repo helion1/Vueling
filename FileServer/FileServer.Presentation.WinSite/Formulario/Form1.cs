@@ -25,13 +25,22 @@ namespace WinFormAlumno {
             AlumnoRepository repositoryAlumno = new AlumnoRepository();
 
             //MONTO EL OBJETO ALUMNO CON LOS DATOS DEL FORM
-            Alumno alumno = new Alumno(Convert.ToInt32(id.Text),
+            try {
+                Alumno alumno = new Alumno(Convert.ToInt32(id.Text),
                                                 nombre.Text,
                                                 apellidos.Text,
                                                 dni.Text);
+                //CREAMOS FICHERO alumno.json
+                try {
+                    repositoryAlumno.Add(alumno, path);
+                }catch (FileLoadException) {
+                    Console.WriteLine("{0} roblemas al cargar el archivo .json.", e); 
+                }
+            } catch (ArgumentException){
+                throw new Exception("Hay algún campo vacío");
+            }
 
-            //CREAMOS FICHERO alumno.json
-            repositoryAlumno.Add(alumno, path);
+            
 
         }
 
@@ -55,14 +64,22 @@ namespace WinFormAlumno {
 
         private void appconfigToolStripMenuItem_Click(object sender, EventArgs e) {
             if (path != ConfigurationManager.AppSettings.Get("pathJsonAlumno")) {
-                path = ConfigurationManager.AppSettings.Get("pathJsonAlumno");
+                try {
+                    path = ConfigurationManager.AppSettings.Get("pathJsonAlumno");
+                } catch (ArgumentException) {
+                    throw new Exception("Variable de AppSettings no configurada");
+                }
             }
 
         }
 
         private void variableEntornoToolStripMenuItem_Click(object sender, EventArgs e) {
             if (path != Environment.GetEnvironmentVariable("vueling_home")) {
-                path = Environment.GetEnvironmentVariable("vueling_home");
+                try {
+                    path = Environment.GetEnvironmentVariable("vueling_home");
+                } catch (ArgumentException) {
+                    throw new Exception("Variable de entorno 'vueling_home' no configurada");
+                }
             }
         }
     }

@@ -14,6 +14,8 @@ namespace FileServer.Infrastructure.Respository.Repositories {
         public Alumno Alumno { get; set; }
 
         public Alumno Add(Alumno alumno, string path) {
+            if (alumno == null || path == null) throw new ArgumentNullException();
+
             string strResultJson = JsonConvert.SerializeObject(alumno);
             FileManager fm = new FileManager();
             fm.CreateJsonToFile(path, strResultJson);
