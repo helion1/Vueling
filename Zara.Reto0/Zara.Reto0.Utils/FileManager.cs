@@ -2,12 +2,11 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
-using Zara.Reto0.Repository.Contracts;
 
-namespace Zara.Reto0.Repository
+namespace Zara.Reto0.Utils
 {
-    class FileManager : IFileManager {
-        public List<string[]> OpenCSV(string path) {
+    public class FileManager{
+        public static List<string[]> OpenCSV(string path) {
             List<string[]> parsedData = new List<string[]>();
 
             using(StreamReader readFile = new StreamReader(path)) {

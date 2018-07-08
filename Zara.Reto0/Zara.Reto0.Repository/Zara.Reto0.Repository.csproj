@@ -4,4 +4,9 @@
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Zara.Reto0.Common.Model\Zara.Reto0.Common.Model.csproj" />
+    <ProjectReference Include="..\Zara.Reto0.Utils\Zara.Reto0.Utils.csproj" />
+  </ItemGroup>
+
 </Project>

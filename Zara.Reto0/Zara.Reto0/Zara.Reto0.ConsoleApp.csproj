@@ -48,5 +48,19 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Zara.Reto0.Common.Model\Zara.Reto0.Common.Model.csproj">
+      <Project>{1714e287-65bc-46fa-b86b-f9612ce0678d}</Project>
+      <Name>Zara.Reto0.Common.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Zara.Reto0.Repository\Zara.Reto0.Repository.csproj">
+      <Project>{c44964d0-0419-443b-8670-afe6c3330679}</Project>
+      <Name>Zara.Reto0.Repository</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Zara.Reto0.Utils\Zara.Reto0.Utils.csproj">
+      <Project>{8a9ed8e9-e58c-4b7e-b111-6170c7989f44}</Project>
+      <Name>Zara.Reto0.Utils</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
