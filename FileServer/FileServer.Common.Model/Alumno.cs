@@ -6,11 +6,15 @@ using System.Threading.Tasks;
 
 namespace FileServer.Common.Model {
     public class Alumno {
+
+        #region Atributos
         public int IdAlumno { get; set; }
         public string Nombre { get; set; }
         public string Apellidos { get; set; }
         public string Dni { get; set; }
+        #endregion
 
+        #region Constructores
         public Alumno() {
 
         }
@@ -21,7 +25,9 @@ namespace FileServer.Common.Model {
             Apellidos = apellidos;
             Dni = dni;
         }
+        #endregion
 
+        #region Métodos
         public override bool Equals(object obj) {
             Alumno a = (Alumno)obj;
             return this.Nombre == a.Nombre
@@ -37,6 +43,7 @@ namespace FileServer.Common.Model {
             hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(Dni);
             return hashCode;
         }
+        #endregion
 
 
 

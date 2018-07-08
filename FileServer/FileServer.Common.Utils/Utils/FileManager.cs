@@ -10,25 +10,51 @@ using System.Security;
 namespace WinFormAlumno.Utils {
     public class FileManager : IFileManager {
 
+        public static bool FileExists(String path) {
+            return File.Exists(path);
+        }
+
+
         public void CreateJsonToFile(string path, string json) {
             if (path == null || json == null) throw new ArgumentNullException();
             try {
                 File.WriteAllText(path, json);
-            } catch (ArgumentException) {
-                throw new Exception("Campos vacíos. No hay texto que guardar.");
-            } catch (SecurityException) {
-                throw new Exception("Faltan permisos para crear archivos");
+            } catch (ArgumentNullException e) {
+                throw e;
+            } catch (PathTooLongException e) {
+                throw e;
+            } catch (DirectoryNotFoundException e) {
+                throw e;
+            } catch (IOException e) {
+                throw e;
+            } catch (UnauthorizedAccessException e) {
+                throw e;
+            } catch (NotSupportedException e) {
+                throw e;
+            } catch (SecurityException e) {
+                throw e;
             }
         }
 
         public string LoadJsonFile(string path) {
-            if (path == null) throw new ArgumentNullException();
             try {
                 return File.ReadAllText(path);
-            }catch (FileLoadException) {
-                throw new Exception("No se encuentra el archivo");
+            } catch (ArgumentNullException e) {
+                throw e;
+            } catch (PathTooLongException e) {
+                throw e;
+            } catch (DirectoryNotFoundException e) {
+                throw e;
+            } catch (IOException e) {
+                throw e;
+            } catch (UnauthorizedAccessException e) {
+                throw e;
+            } catch (NotSupportedException e) {
+                throw e;
+            } catch (SecurityException e) {
+                throw e;
             }
-            
+
         }
     }
 }
