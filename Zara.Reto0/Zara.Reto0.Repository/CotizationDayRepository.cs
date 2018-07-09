@@ -46,15 +46,26 @@ namespace Zara.Reto0.Utils
 
         /*
         public decimal Ganancia() {
-            foreach(CotizationDay cp in ListadoFinal) {
-                int mesActual = cp.Fecha.Month;
+            List<CotizationDay> ListadoDiaSemanal = new List<CotizationDay>();
+            DateTime diaSemanal = DateTime.Parse("Thursday");
+            DateTime UltimoJueves;
 
-                DateTime UltimoJueves = DateTimeUtil.GetLastThursdayOfTheMonth(cp.Fecha);
+            foreach (CotizationDay cp in ListadoFinal) {
+                UltimoJueves = DateTimeUtil.GetLastThursdayOfTheMonth(cp.Fecha);
+
+                if (cp.Fecha == UltimoJueves.AddDays(1)) {
+                    ListadoDiaSemanal.Add(cp);
+                }
+
+                
             }
-            
-            return ;
-        }*/
 
+            
+
+            return ;
+        }
+        */
+        
         
         public decimal SumaCierres() {
             decimal res = 0;
