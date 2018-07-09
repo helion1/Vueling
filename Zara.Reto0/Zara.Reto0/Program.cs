@@ -14,8 +14,9 @@ namespace Zara.Reto0 {
             CotizationDayRepository rep = new CotizationDayRepository(fichero);
 
             rep.GenerarListado();
-            Console.WriteLine(rep.sumaCierres());
+            Console.WriteLine(rep.ListadoFinal.Last().Fecha);
         }
+        
            
     }
 }

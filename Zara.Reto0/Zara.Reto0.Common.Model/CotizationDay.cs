@@ -6,7 +6,7 @@ namespace Zara.Reto0.Common.Model
 {
     public class CotizationDay{
         #region Constructors
-        public CotizationDay(DateTime fecha, double apertura, double cierre) {
+        public CotizationDay(DateTime fecha, decimal apertura, decimal cierre) {
             Fecha = fecha;
             Apertura = apertura;
             Cierre = cierre;
@@ -18,8 +18,8 @@ namespace Zara.Reto0.Common.Model
 
         #region Attributes
         public DateTime Fecha { get; set; }
-        public double Apertura { get; set; }
-        public double Cierre { get; set; }
+        public decimal Apertura { get; set; }
+        public decimal Cierre { get; set; }
         #endregion
 
 
