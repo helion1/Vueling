@@ -6,7 +6,8 @@ namespace Zara.Reto0.Utils
 {
     public static class DateTimeUtil {
         public static DateTime GetLastThursdayOfTheMonth(DateTime date) {
-            var lastDayOfMonth = new DateTime(date.Year, date.Month, DateTime.DaysInMonth(date.Year, date.Month));
+            var lastDayOfMonth = new DateTime(date.Year, date.Month,
+                                                DateTime.DaysInMonth(date.Year, date.Month));
 
             while (lastDayOfMonth.DayOfWeek != DayOfWeek.Thursday)
                 lastDayOfMonth = lastDayOfMonth.AddDays(-1);

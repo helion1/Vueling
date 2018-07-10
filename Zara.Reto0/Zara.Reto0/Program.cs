@@ -14,7 +14,13 @@ namespace Zara.Reto0 {
             CotizationDayRepository rep = new CotizationDayRepository(fichero);
 
             rep.GenerarListado();
-            Console.WriteLine(rep.ListadoFinal.Last().Fecha.DayOfWeek+1);
+            DateTime Fecha = rep.UltimoDiaFichero();
+            decimal total = rep.Ganancia(50, 2, Fecha);
+
+            Console.WriteLine($"-------------------------------------------");
+            Console.WriteLine($"-------------------------------------------");
+            Console.WriteLine($"-------------------------------------------");
+            Console.WriteLine($"PRECIO TOTAL DE LA VENTA: {total}");
         }
         
            
