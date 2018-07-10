@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2035
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zara.Reto0.ConsoleApp", "Zara.Reto0\Zara.Reto0.ConsoleApp.csproj", "{27AA637F-5540-4F57-904C-767BE0568884}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2. Common", "2. Common", "{93971C87-9A24-4B6F-BA76-3D95EBF30EB6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3. Infrastructure", "3. Infrastructure", "{261D0B79-4000-4EF0-AAB2-E3D5E6F47C88}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zara.Reto0.Common.Model", "Zara.Reto0.Common.Model\Zara.Reto0.Common.Model.csproj", "{1714E287-65BC-46FA-B86B-F9612CE0678D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Utils", "Utils", "{9BB45C9F-3E96-4431-BAC8-D89E35697752}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Model", "Model", "{DC6C72E3-E991-4B50-B7D2-C48AE68770F0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zara.Reto0.Utils", "Zara.Reto0.Utils\Zara.Reto0.Utils.csproj", "{8A9ED8E9-E58C-4B7E-B111-6170C7989F44}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. Presentation", "1. Presentation", "{197A27A1-E2C8-4590-A884-35EDA0AF96BD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zara.Reto0.Repository", "Zara.Reto0.Repository\Zara.Reto0.Repository.csproj", "{C44964D0-0419-443B-8670-AFE6C3330679}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{27AA637F-5540-4F57-904C-767BE0568884}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27AA637F-5540-4F57-904C-767BE0568884}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27AA637F-5540-4F57-904C-767BE0568884}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27AA637F-5540-4F57-904C-767BE0568884}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1714E287-65BC-46FA-B86B-F9612CE0678D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1714E287-65BC-46FA-B86B-F9612CE0678D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1714E287-65BC-46FA-B86B-F9612CE0678D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1714E287-65BC-46FA-B86B-F9612CE0678D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A9ED8E9-E58C-4B7E-B111-6170C7989F44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A9ED8E9-E58C-4B7E-B111-6170C7989F44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A9ED8E9-E58C-4B7E-B111-6170C7989F44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A9ED8E9-E58C-4B7E-B111-6170C7989F44}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C44964D0-0419-443B-8670-AFE6C3330679}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C44964D0-0419-443B-8670-AFE6C3330679}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C44964D0-0419-443B-8670-AFE6C3330679}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C44964D0-0419-443B-8670-AFE6C3330679}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{27AA637F-5540-4F57-904C-767BE0568884} = {197A27A1-E2C8-4590-A884-35EDA0AF96BD}
+		{1714E287-65BC-46FA-B86B-F9612CE0678D} = {DC6C72E3-E991-4B50-B7D2-C48AE68770F0}
+		{9BB45C9F-3E96-4431-BAC8-D89E35697752} = {93971C87-9A24-4B6F-BA76-3D95EBF30EB6}
+		{DC6C72E3-E991-4B50-B7D2-C48AE68770F0} = {93971C87-9A24-4B6F-BA76-3D95EBF30EB6}
+		{8A9ED8E9-E58C-4B7E-B111-6170C7989F44} = {9BB45C9F-3E96-4431-BAC8-D89E35697752}
+		{C44964D0-0419-443B-8670-AFE6C3330679} = {261D0B79-4000-4EF0-AAB2-E3D5E6F47C88}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {844D0603-14C7-485F-8415-D6AAC72646F2}
+	EndGlobalSection
+EndGlobal
