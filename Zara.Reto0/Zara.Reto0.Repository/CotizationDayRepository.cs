@@ -66,7 +66,6 @@ namespace Zara.Reto0.Utils
                     Console.WriteLine($"\n-----------MES {dt.Month} AÑO {dt.Year}-------------------------");
                     Console.WriteLine($"Dia de compra {diaDeCompra}");
 
-                    int i = 0;
                     while (ListadoFechas.IndexOf(diaDeCompra) == -1 && 
                         DateTime.Compare(diaDeCompra, fechaVenta) < 0) {
                         diaDeCompra = diaDeCompra.AddDays(1);
@@ -86,8 +85,8 @@ namespace Zara.Reto0.Utils
             }
 
             decimal acciones = 0;
-            
             decimal inversionFinal = inversionInicial - Decimal.Round((Decimal.Round(inversionInicial * retencion)/100), 3);
+
             Console.WriteLine($"\n---------------MOMENTO DE INVERSION---------------------");
             Console.WriteLine($"Retención {retencion} e inversión inicial {inversionInicial}");
             Console.WriteLine($"Inversion final {inversionFinal}");
@@ -108,10 +107,12 @@ namespace Zara.Reto0.Utils
                     break;
                 }
             }
+
             Console.WriteLine($"\n---------------MOMENTO DE VENTA FINAL---------------------");
             Console.WriteLine($"Total acciones: {acciones}");
             Console.WriteLine($"Fecha de venta: {ultimoDiaCotizacion.Fecha}");
             Console.WriteLine($"Precio Cierre: {ultimoDiaCotizacion.Cierre}");
+
             return Decimal.Round(Decimal.Multiply(acciones, ultimoDiaCotizacion.Cierre), 3);
         }
         
