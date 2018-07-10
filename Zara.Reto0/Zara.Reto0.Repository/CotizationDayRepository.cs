@@ -45,7 +45,7 @@ namespace Zara.Reto0.Utils
         }
 
         
-        public decimal Ganancia() {
+        public decimal Ganancia(decimal inversionInicial, decimal retencion, DateTime fechaVenta) {
             List<CotizationDay> ListadoDiasTransacciones = new List<CotizationDay>();
             List<DateTime> ListadoFechas = new List<DateTime>();
 
@@ -55,7 +55,6 @@ namespace Zara.Reto0.Utils
 
             DateTime diaSemanal = DateTime.Parse("Thursday");
             DateTime diaDeCompra;
-            decimal res = 0;
             int mesActual = 0;
 
             foreach (DateTime dt in ListadoFechas) {
@@ -73,13 +72,23 @@ namespace Zara.Reto0.Utils
                         }
                     }
                 }
-
-                
             }
 
-            
+            Decimal diaVentaCierre = 0;
+            decimal acciones = 0;
+            retencion = Decimal.Round((Decimal.Divide(retencion, 100)), 3);
+            decimal inversionFinal = Decimal.Round((inversionInicial * retencion), 3);
 
-            return res;
+            foreach (CotizationDay cd in ListadoDiasTransacciones) {
+                acciones += Decimal.Round(Decimal.Divide(inversionFinal, cd.Apertura), 3);
+
+                if(DateTime.Compare(cd.Fecha, fechaVenta) == 0) {
+                    diaVentaCierre = cd.Cierre;
+                    break;
+                }
+            }
+
+            return Decimal.Round(Decimal.Multiply(acciones, diaVentaCierre));
         }
         
         
