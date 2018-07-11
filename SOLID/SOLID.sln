@@ -7,9 +7,19 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SOLID.SingleResponsability.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SOLID.SingleResponsability.Off", "SOLID.SingleResponsability.Off\SOLID.SingleResponsability.Off.csproj", "{7203B026-E772-44F2-AD5D-169578391BA5}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Single Responsability", "Single Responsability", "{5112484F-0225-4BF9-BE20-4149DE8785B5}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. Single Responsability", "1. Single Responsability", "{5112484F-0225-4BF9-BE20-4149DE8785B5}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Open Close", "Open Close", "{0B170B4D-4837-4F4D-BE22-04816E6AAB5D}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2. Open Close", "2. Open Close", "{0B170B4D-4837-4F4D-BE22-04816E6AAB5D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3. Liskov Subsitution", "3. Liskov Subsitution", "{04FFC455-FC5B-4D38-9CED-6BC16D1A4EE6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4. Interface Segregation", "4. Interface Segregation", "{501E8BE0-0076-4220-86A6-0058DF720A11}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5. Dependence Inyection", "5. Dependence Inyection", "{3935BBC7-20C6-44B4-86FC-A472CF8E6C12}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SOLID.OpenClose.Off", "SOLID.OpenClose.Off\SOLID.OpenClose.Off.csproj", "{5C74CCD1-61A2-4932-BFDB-2C0492A56E0D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SOLID.OpenClose.On", "SOLID.OpenClose.On\SOLID.OpenClose.On.csproj", "{C875A913-E5BA-4399-A12B-459E901ED050}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,6 +35,14 @@ Global
 		{7203B026-E772-44F2-AD5D-169578391BA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7203B026-E772-44F2-AD5D-169578391BA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7203B026-E772-44F2-AD5D-169578391BA5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C74CCD1-61A2-4932-BFDB-2C0492A56E0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C74CCD1-61A2-4932-BFDB-2C0492A56E0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C74CCD1-61A2-4932-BFDB-2C0492A56E0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C74CCD1-61A2-4932-BFDB-2C0492A56E0D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C875A913-E5BA-4399-A12B-459E901ED050}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C875A913-E5BA-4399-A12B-459E901ED050}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C875A913-E5BA-4399-A12B-459E901ED050}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C875A913-E5BA-4399-A12B-459E901ED050}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -32,6 +50,8 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{4463AC08-AB2C-420F-9AC1-429083906960} = {5112484F-0225-4BF9-BE20-4149DE8785B5}
 		{7203B026-E772-44F2-AD5D-169578391BA5} = {5112484F-0225-4BF9-BE20-4149DE8785B5}
+		{5C74CCD1-61A2-4932-BFDB-2C0492A56E0D} = {0B170B4D-4837-4F4D-BE22-04816E6AAB5D}
+		{C875A913-E5BA-4399-A12B-459E901ED050} = {0B170B4D-4837-4F4D-BE22-04816E6AAB5D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {61AE0145-18D6-443B-B248-3101685C9FE3}
