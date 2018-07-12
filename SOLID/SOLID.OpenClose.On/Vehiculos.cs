@@ -18,4 +18,14 @@ namespace SOLID.OpenClose.Off {
     public class Camion : Vehiculo{}
 
     public class Coche : Vehiculo {}
+
+    class Program {
+        static void Main(string[] args) {
+            Coche coche = new Coche();
+            Camion camion = new Camion();
+
+            coche.EncenderVehiculo(coche);
+            camion.EncenderVehiculo(camion);
+        }
+    }
 }

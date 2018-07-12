@@ -10,8 +10,11 @@ namespace SOLID.OpenClose.Off {
         public int Id { get; set; }
         public bool Encendido { get; set; }
 
-        public void EncenderVehiculo() {
-            this.Encendido = true;
+        public void EncenderCamion(Camion camion) {
+            camion.Encendido = true;
+        }
+        public bool EsUnCamion() {
+            return true;
         }
     }
 
@@ -20,8 +23,28 @@ namespace SOLID.OpenClose.Off {
         public int Id { get; set; }
         public bool Encendido { get; set; }
 
-        public void EncenderVehiculo() {
-            this.Encendido = true;
+        public void EncenderCoche(Coche coche) {
+            coche.Encendido = true;
+        }
+
+        public bool EsUnCoche() {
+            return true;
+        }
+    }
+
+    class Program {
+        static void Main(string[] args) {
+            Coche vehiculo = new Coche();
+            Camion vehiculo2 = new Camion();
+            
+            if(vehiculo.EsUnCoche() == true) {
+                vehiculo.EncenderCoche(vehiculo);
+            } else {
+                vehiculo2.EncenderCamion(vehiculo2);
+            }
+
+            
+
         }
     }
 }
