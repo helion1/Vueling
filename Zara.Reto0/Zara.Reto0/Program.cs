@@ -10,17 +10,21 @@ using Zara.Reto0.Utils;
 namespace Zara.Reto0 {
     class Program {
         static void Main(string[] args) {
-            string fichero = "stocks-ITX.csv";
+            string fichero = "..\\..\\stocks-ITX.csv";
             CotizationDayRepository rep = new CotizationDayRepository(fichero);
 
-            rep.GenerarListado();
-            DateTime Fecha = rep.UltimoDiaFichero();
-            decimal total = rep.Ganancia(50, 2, Fecha);
+            try {
+                rep.GenerarListado();
+                DateTime Fecha = rep.UltimoDiaFichero();
+                decimal total = rep.Ganancia(50, 2, Fecha);
 
-            Console.WriteLine($"-------------------------------------------");
-            Console.WriteLine($"-------------------------------------------");
-            Console.WriteLine($"-------------------------------------------");
-            Console.WriteLine($"PRECIO TOTAL DE LA VENTA: {total}");
+                Console.WriteLine($"-------------------------------------------");
+                Console.WriteLine($"-------------------------------------------");
+                Console.WriteLine($"-------------------------------------------");
+                Console.WriteLine($"PRECIO TOTAL DE LA VENTA: {total}");
+            }catch (Exception e) {
+                throw e;
+            }
         }
         
            

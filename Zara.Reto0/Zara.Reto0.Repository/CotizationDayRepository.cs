@@ -120,13 +120,5 @@ namespace Zara.Reto0.Utils
             return ListadoFinal.Last().Fecha;
         }
         
-        
-        public decimal SumaCierres() {
-            decimal res = 0;
-            foreach(CotizationDay cd in ListadoFinal) {
-                res += cd.Cierre;
-            }
-            return res;
-        }
     }
 }
