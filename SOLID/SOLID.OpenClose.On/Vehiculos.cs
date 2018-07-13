@@ -5,27 +5,45 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace SOLID.OpenClose.Off {
-    public abstract class Vehiculo {
-        public int Ruedas { get; set; }
-        public int Id { get; set; }
-        public bool Encendido { get; set; }
+    public static class Gasolinera {
+        public static void LavarVehiculos(List<object> vehiculos) {
+            foreach(var vehiculo in vehiculos) {
+                if(vehiculo is Coche) {
+                    Gasolinera.TunelPeque((Coche)vehiculo);
+                } else {
+                    Gasolinera.TunelGrande((Camion)vehiculo);
+                }
+            }
+        }
 
-        public void EncenderVehiculo(Vehiculo vehiculo) {
-            vehiculo.Encendido = true;
+        public static bool TunelPeque(Coche coche) {
+            return coche.Limpio = true;
+        }
+
+        public static bool TunelGrande(Camion camion) {
+            return camion.Limpio = true;
         }
     }
 
-    public class Camion : Vehiculo{}
+    public class Camion{
+        public bool Limpio { get; set; }
+        public int Carga { get; set; }
+    }
 
-    public class Coche : Vehiculo {}
+    public class Coche {
+        public bool Limpio { get; set; }
+    }
 
     class Program {
         static void Main(string[] args) {
             Coche coche = new Coche();
             Camion camion = new Camion();
+            List<object> lista = new List<object>();
 
-            coche.EncenderVehiculo(coche);
-            camion.EncenderVehiculo(camion);
+            lista.Add(coche);
+            lista.Add(camion);
+
+            Gasolinera.LavarVehiculos(lista);
         }
     }
 }

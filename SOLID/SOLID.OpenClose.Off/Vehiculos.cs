@@ -5,46 +5,40 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace SOLID.OpenClose.Off {
-    public class Camion {
-        public int Ruedas { get; set; }
-        public int Id { get; set; }
-        public bool Encendido { get; set; }
+    public static class Gasolinera {
+        public static void LavarVehiculos(List<Vehiculo> vehiculos) {
+            foreach (var vehiculo in vehiculos) {
+                Gasolinera.TunelLavado(vehiculo);
+                }
+            }
 
-        public void EncenderCamion(Camion camion) {
-            camion.Encendido = true;
-        }
-        public bool EsUnCamion() {
-            return true;
-        }
-    }
-
-    public class Coche {
-        public int Ruedas { get; set; }
-        public int Id { get; set; }
-        public bool Encendido { get; set; }
-
-        public void EncenderCoche(Coche coche) {
-            coche.Encendido = true;
-        }
-
-        public bool EsUnCoche() {
-            return true;
+        public static bool TunelLavado(Vehiculo vehiculo) {
+            return vehiculo.Limpio = true;
         }
     }
+
+    public abstract class Vehiculo {
+        public int ruedas { get; set; }
+        public bool Limpio { get; set; }
+    }
+
+    public class Camion : Vehiculo{
+        public int Carga { get; set; }
+    }
+
+    public class Coche : Vehiculo{}
+
 
     class Program {
         static void Main(string[] args) {
-            Coche vehiculo = new Coche();
-            Camion vehiculo2 = new Camion();
-            
-            if(vehiculo.EsUnCoche() == true) {
-                vehiculo.EncenderCoche(vehiculo);
-            } else {
-                vehiculo2.EncenderCamion(vehiculo2);
-            }
+            Coche coche = new Coche();
+            Camion camion = new Camion();
+            List<Vehiculo> lista = new List<Vehiculo> {
+                coche,
+                camion
+            };
 
-            
-
+            Gasolinera.LavarVehiculos(lista);
         }
     }
 }
