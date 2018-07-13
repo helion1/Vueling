@@ -9,17 +9,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2. Common", "2. Common", "{
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3. Infrastructure", "3. Infrastructure", "{261D0B79-4000-4EF0-AAB2-E3D5E6F47C88}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zara.Reto0.Common.Model", "Zara.Reto0.Common.Model\Zara.Reto0.Common.Model.csproj", "{1714E287-65BC-46FA-B86B-F9612CE0678D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Zara.Reto0.Common.Model", "Zara.Reto0.Common.Model\Zara.Reto0.Common.Model.csproj", "{1714E287-65BC-46FA-B86B-F9612CE0678D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Utils", "Utils", "{9BB45C9F-3E96-4431-BAC8-D89E35697752}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Model", "Model", "{DC6C72E3-E991-4B50-B7D2-C48AE68770F0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zara.Reto0.Utils", "Zara.Reto0.Utils\Zara.Reto0.Utils.csproj", "{8A9ED8E9-E58C-4B7E-B111-6170C7989F44}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Zara.Reto0.Utils", "Zara.Reto0.Utils\Zara.Reto0.Utils.csproj", "{8A9ED8E9-E58C-4B7E-B111-6170C7989F44}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. Presentation", "1. Presentation", "{197A27A1-E2C8-4590-A884-35EDA0AF96BD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zara.Reto0.Repository", "Zara.Reto0.Repository\Zara.Reto0.Repository.csproj", "{C44964D0-0419-443B-8670-AFE6C3330679}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Zara.Reto0.Repository", "Zara.Reto0.Repository\Zara.Reto0.Repository.csproj", "{C44964D0-0419-443B-8670-AFE6C3330679}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
