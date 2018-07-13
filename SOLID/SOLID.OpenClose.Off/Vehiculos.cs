@@ -8,11 +8,11 @@ namespace SOLID.OpenClose.Off {
     public static class Gasolinera {
         public static void LavarVehiculos(List<Vehiculo> vehiculos) {
             foreach (var vehiculo in vehiculos) {
-                Gasolinera.TunelLavado(vehiculo);
+                Gasolinera.TunelMultiTamaño(vehiculo);
                 }
             }
 
-        public static bool TunelLavado(Vehiculo vehiculo) {
+        public static bool TunelMultiTamaño(Vehiculo vehiculo) {
             return vehiculo.Limpio = true;
         }
     }
