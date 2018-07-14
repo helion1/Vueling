@@ -17,9 +17,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4. Interface Segregation", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5. Dependence Inyection", "5. Dependence Inyection", "{3935BBC7-20C6-44B4-86FC-A472CF8E6C12}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SOLID.OpenClose.Off", "SOLID.OpenClose.Off\SOLID.OpenClose.Off.csproj", "{5C74CCD1-61A2-4932-BFDB-2C0492A56E0D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SOLID.OpenClose.On", "SOLID.OpenClose.Off\SOLID.OpenClose.On.csproj", "{5C74CCD1-61A2-4932-BFDB-2C0492A56E0D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SOLID.OpenClose.On", "SOLID.OpenClose.On\SOLID.OpenClose.On.csproj", "{C875A913-E5BA-4399-A12B-459E901ED050}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SOLID.OpenClose.Off", "SOLID.OpenClose.On\SOLID.OpenClose.Off.csproj", "{C875A913-E5BA-4399-A12B-459E901ED050}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SOLID.Liskov.Off", "SOLID.Liskov.Off\SOLID.Liskov.Off.csproj", "{DAC55079-78FC-4FDC-BEC8-0ED6A93C3C1B}"
 EndProject
@@ -28,6 +28,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SOLID.InterfaceSegregation.Off", "SOLID.InterfaceSegregation.Off\SOLID.InterfaceSegregation.Off.csproj", "{F62A645A-1D3E-4652-AF20-9DD7E665BE79}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SOLID.InterfaceSegregation.On", "SOLID.InterfaceSegregation.On\SOLID.InterfaceSegregation.On.csproj", "{FA1794DF-50BE-46E2-B091-550B9DAAB55B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SOLID.DependenceInyection.Off", "SOLID.DependenceInyection.Off\SOLID.DependenceInyection.Off.csproj", "{851175E7-8F9D-49EF-B78A-92F42E0FB95F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -67,6 +69,10 @@ Global
 		{FA1794DF-50BE-46E2-B091-550B9DAAB55B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FA1794DF-50BE-46E2-B091-550B9DAAB55B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FA1794DF-50BE-46E2-B091-550B9DAAB55B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{851175E7-8F9D-49EF-B78A-92F42E0FB95F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{851175E7-8F9D-49EF-B78A-92F42E0FB95F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{851175E7-8F9D-49EF-B78A-92F42E0FB95F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{851175E7-8F9D-49EF-B78A-92F42E0FB95F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -80,6 +86,7 @@ Global
 		{2B4AF262-9783-4126-977D-4B4599432082} = {04FFC455-FC5B-4D38-9CED-6BC16D1A4EE6}
 		{F62A645A-1D3E-4652-AF20-9DD7E665BE79} = {501E8BE0-0076-4220-86A6-0058DF720A11}
 		{FA1794DF-50BE-46E2-B091-550B9DAAB55B} = {501E8BE0-0076-4220-86A6-0058DF720A11}
+		{851175E7-8F9D-49EF-B78A-92F42E0FB95F} = {3935BBC7-20C6-44B4-86FC-A472CF8E6C12}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {61AE0145-18D6-443B-B248-3101685C9FE3}

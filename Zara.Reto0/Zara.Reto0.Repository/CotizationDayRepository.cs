@@ -35,8 +35,8 @@ namespace Zara.Reto0.Utils
                 if (!firstTimeEnter) {
                     string[] column = line.Split(';');
                     DateTime Fecha = DateTime.ParseExact(column[0], "dd-MMM-yyyy", CultureInfo.CreateSpecificCulture("es-US"));
-                    Decimal Apertura = Convert.ToDecimal(column[1], nfi);
-                    Decimal Cierre = Convert.ToDecimal(column[2], nfi);
+                    Decimal Cierre = Convert.ToDecimal(column[1], nfi);
+                    Decimal Apertura = Convert.ToDecimal(column[2], nfi);
                     ListadoFinal.Add(new CotizationDay(Fecha, Apertura, Cierre));
                 } 
                 else firstTimeEnter = false;

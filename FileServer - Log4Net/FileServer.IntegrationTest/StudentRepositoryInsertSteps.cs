@@ -1,5 +1,6 @@
 ﻿using FileServer.Common.Model;
 using FileServer.Infrastructure.Respository.Repositories;
+using FluentAssertions;
 using System;
 using TechTalk.SpecFlow;
 
@@ -26,7 +27,8 @@ namespace FileServer.BehaviorTest.FileServer.IntegrationTest
         [Then(@"the student Repository should return Student Id")]
         public void ThenTheStudentRepositoryShouldReturnStudentId()
         {
-            repository.
+            student.Id.Should().Be(1);
+            student.Age.Should().Be(28);
         }
     }
 }

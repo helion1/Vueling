@@ -20,7 +20,7 @@ namespace FileServer.Infrastructure.Respository.Repositories {
         protected int GetNewId() {
             int lastid = 0;
             foreach (var entity in Entities) {
-                lastid = lastid > entity.Id > lastid.Id : entity.Id;
+                lastid = lastid > entity.Id ? lastid : entity.Id;
             }
             return ++lastid;
         }
