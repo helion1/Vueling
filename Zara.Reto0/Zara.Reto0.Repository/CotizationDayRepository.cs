@@ -102,15 +102,16 @@ namespace Zara.Reto0.Utils
                 if (cd.Fecha.Year != year && !(cd.Fecha.Month == 1 && cd.Fecha.Day < 7)) {
                     dineroGanadoAnual2 = Decimal.Round(Decimal.Multiply(accionesAnuales, Convert.ToDecimal(29.17)), 3);
                     Console.WriteLine($"\n=======================================");
-                    Console.WriteLine($"Dinero sacado en {year}: {dineroGanadoAnual}");
+                    //Console.WriteLine($"Dinero sacado en {year}: {dineroGanadoAnual}");
                     Console.WriteLine($"Acciones totales en {year}: {accionesAnuales}");
-                    Console.WriteLine($"Dinero ganado 2 en {year}: {dineroGanadoAnual2}");
+                    Console.WriteLine($"Dinero ganado en {year}: {dineroGanadoAnual2}");
                     Console.WriteLine($"\n=======================================");
                     total2 = Decimal.Add(dineroGanadoAnual,total2);
                     dineroGanadoAnual = 0;
                     accionesAnuales = 0;
                     year = cd.Fecha.Year;
                 }
+
                 acciones = Decimal.Add(Decimal.Round(Decimal.Divide(inversionFinal, cd.Apertura), 3), acciones);
                 accCompradasMes = Decimal.Round(Decimal.Divide(inversionFinal, cd.Apertura), 3);
                 dineroGanadoAnual = Decimal.Add(Decimal.Round(Decimal.Multiply(accCompradasMes, Convert.ToDecimal(29.17)), 3), dineroGanadoAnual);
@@ -120,16 +121,16 @@ namespace Zara.Reto0.Utils
 
                 Console.WriteLine($"\n------------------------------------");
                 Console.WriteLine($"Número de acciones Compradas: {accCompradasMes}");
-                Console.WriteLine($"Dinero generado este mes a 29,17: {dineroGanadoMes}");
-                Console.WriteLine($"Número de acciones Totales: {acciones}");
+                Console.WriteLine($"Dinero generado este mes a 29,17€: {dineroGanadoMes}");
+                Console.WriteLine($"Número de acciones Totales acumuladas: {acciones}");
                 Console.WriteLine($"Fecha {cd.Fecha} y precio de la acción de apertura: {cd.Apertura}");
             }
 
             dineroGanadoAnual2 = Decimal.Round(Decimal.Multiply(accionesAnuales, Convert.ToDecimal(29.17)), 3);
             Console.WriteLine($"\n=======================================");
-            Console.WriteLine($"Dinero sacado en {year}: {dineroGanadoAnual}");
+            //Console.WriteLine($"Dinero sacado en {year}: {dineroGanadoAnual}");
             Console.WriteLine($"Acciones totales en {year}: {accionesAnuales}");
-            Console.WriteLine($"Dinero ganado 2 en {year}: {dineroGanadoAnual2}");
+            Console.WriteLine($"Dinero ganado en {year}: {dineroGanadoAnual2}");
             Console.WriteLine($"\n=======================================");
             total2 = Decimal.Add(dineroGanadoAnual,total2);
 
@@ -143,10 +144,10 @@ namespace Zara.Reto0.Utils
             }
 
             Console.WriteLine($"\n---------------MOMENTO DE VENTA FINAL---------------------");
-            Console.WriteLine($"Total acciones: {acciones}");
+            //Console.WriteLine($"Total acciones: {acciones}");
             Console.WriteLine($"Fecha de venta: {ultimoDiaCotizacion.Fecha}");
             Console.WriteLine($"Precio Cierre: {ultimoDiaCotizacion.Cierre}");
-            Console.WriteLine($"TOTAL 2: {total2}");
+            Console.WriteLine($"TOTAL: {total2}");
 
             return Decimal.Round(Decimal.Multiply(acciones, ultimoDiaCotizacion.Cierre), 3);
         }
