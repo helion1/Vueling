@@ -86,17 +86,30 @@ namespace Zara.Reto0.Utils
 
             decimal acciones = 0;
             decimal inversionFinal = inversionInicial - Decimal.Round((Decimal.Round(inversionInicial * retencion)/100), 3);
+            decimal accCompradasMes = 0;
+            decimal dineroGanadoAnual = 0;
 
             Console.WriteLine($"\n---------------MOMENTO DE INVERSION---------------------");
             Console.WriteLine($"Retención {retencion} e inversión inicial {inversionInicial}");
             Console.WriteLine($"Inversion final {inversionFinal}");
+            int year = 2001;
 
             foreach (CotizationDay cd in ListadoDiasTransacciones) {
                 acciones += Decimal.Round(Decimal.Divide(inversionFinal, cd.Apertura), 3);
+                accCompradasMes = Decimal.Round(Decimal.Divide(inversionFinal, cd.Apertura), 3);
+                dineroGanadoAnual += Decimal.Round(Decimal.Multiply(accCompradasMes, Convert.ToDecimal(29.17)), 3);
+
                 Console.WriteLine($"\n------------------------------------");
-                Console.WriteLine($"Número de acciones Compradas: {Decimal.Round(Decimal.Divide(inversionFinal, cd.Apertura), 3)}");
+                Console.WriteLine($"Número de acciones Compradas: {accCompradasMes}");
                 Console.WriteLine($"Número de acciones Totales: {acciones}");
                 Console.WriteLine($"Fecha {cd.Fecha} y precio de la acción de apertura: {cd.Apertura}");
+
+                if ((cd.Fecha.Year != year && !(cd.Fecha.Month == 1 && cd.Fecha.Day < 7)) || 
+                    (cd.Fecha.Year == 2017 && cd.Fecha.Month == 12)) {
+                    year = cd.Fecha.Year;
+                    Console.WriteLine($"Dinero sacado en {year}: {dineroGanadoAnual}" );
+                    dineroGanadoAnual = 0;
+                }
             }
 
             CotizationDay ultimoDiaCotizacion = new CotizationDay();

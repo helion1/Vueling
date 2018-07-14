@@ -1,3 +1,5 @@
+TOTAL = 36585,568.
+
 Zara.Reto0 utiliza patron de 3 capas.
 1. Presentation, donde he creado la aplicación de consola.
 2. Common, donde está el modelo CotizationDay.cs y la carpeta Utils, donde hay 2 clases separadas siguiendo el principio Single Responsability.
