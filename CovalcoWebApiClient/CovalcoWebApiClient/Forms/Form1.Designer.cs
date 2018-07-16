@@ -29,6 +29,8 @@
             this.button3 = new System.Windows.Forms.Button();
             this.txtId = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
+            this.txtIdDelete = new System.Windows.Forms.TextBox();
+            this.button5 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -84,7 +86,7 @@
             // button4
             // 
             this.button4.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.button4.Location = new System.Drawing.Point(558, 381);
+            this.button4.Location = new System.Drawing.Point(558, 368);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(131, 44);
             this.button4.TabIndex = 5;
@@ -92,11 +94,31 @@
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
+            // txtIdDelete
+            // 
+            this.txtIdDelete.Location = new System.Drawing.Point(437, 375);
+            this.txtIdDelete.Multiline = true;
+            this.txtIdDelete.Name = "txtIdDelete";
+            this.txtIdDelete.Size = new System.Drawing.Size(44, 31);
+            this.txtIdDelete.TabIndex = 7;
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(272, 366);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(159, 46);
+            this.button5.TabIndex = 6;
+            this.button5.Text = "Eliminar alumno por id";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(759, 458);
+            this.Controls.Add(this.txtIdDelete);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.button3);
@@ -120,6 +142,8 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.TextBox txtIdDelete;
+        private System.Windows.Forms.Button button5;
     }
 }
 

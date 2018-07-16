@@ -45,12 +45,24 @@ namespace CovalcoWebApiClient {
                 lista.Add(alumno);
                 dataGridView1.DataSource = lista;
                 dataGridView1.Refresh();
+                txtId.Text = "";
             }
         }
 
         private void button4_Click(object sender, EventArgs e) {
             Form3 form3 = new Form3();
             form3.Show();
+        }
+
+        private void button5_Click(object sender, EventArgs e) {
+            if (String.IsNullOrEmpty(txtIdDelete.Text)) {
+                MessageBox.Show(Resource.CampoVacio);
+            } else {
+                AlumnoViewModel alumno = new AlumnoViewModel();
+                HTTPApiController.DeleteAlumnoById(Convert.ToInt16(txtIdDelete.Text));
+                button1_Click(sender, e);
+                txtIdDelete.Text = "";
+            }
         }
     }
 }

@@ -88,6 +88,15 @@ namespace CovalcoWebApiClient {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a /api/AlumnoApi/.
+        /// </summary>
+        internal static string pathDeleteAlumnoById {
+            get {
+                return ResourceManager.GetString("pathDeleteAlumnoById", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a /api/AlumnoApi.
         /// </summary>
         internal static string pathGetAllAlumnos {

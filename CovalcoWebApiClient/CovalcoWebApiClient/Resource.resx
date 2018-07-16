@@ -126,6 +126,9 @@
   <data name="MensajeInicio" xml:space="preserve">
     <value>Formulario Inicializado</value>
   </data>
+  <data name="pathDeleteAlumnoById" xml:space="preserve">
+    <value>/api/AlumnoApi/</value>
+  </data>
   <data name="pathGetAllAlumnos" xml:space="preserve">
     <value>/api/AlumnoApi</value>
   </data>
