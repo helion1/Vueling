@@ -113,5 +113,14 @@ namespace CovalcoWebApiClient {
                 return ResourceManager.GetString("pathPostAddAlumno", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a /api/AlumnoApi/.
+        /// </summary>
+        internal static string pathPutAlumnoById {
+            get {
+                return ResourceManager.GetString("pathPutAlumnoById", resourceCulture);
+            }
+        }
     }
 }

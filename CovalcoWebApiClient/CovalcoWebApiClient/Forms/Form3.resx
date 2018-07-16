@@ -117,25 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="CampoVacio" xml:space="preserve">
-    <value>Alguno de los campos está vacío.</value>
-  </data>
-  <data name="MensajeError" xml:space="preserve">
-    <value>Soy un mensaje de Error</value>
-  </data>
-  <data name="MensajeInicio" xml:space="preserve">
-    <value>Formulario Inicializado</value>
-  </data>
-  <data name="pathGetAllAlumnos" xml:space="preserve">
-    <value>/api/AlumnoApi</value>
-  </data>
-  <data name="pathGetAlumnoById" xml:space="preserve">
-    <value>/api/AlumnoApi/</value>
-  </data>
-  <data name="pathPostAddAlumno" xml:space="preserve">
-    <value>/api/AlumnoApi</value>
-  </data>
-  <data name="pathPutAlumnoById" xml:space="preserve">
-    <value>/api/AlumnoApi/</value>
-  </data>
 </root>

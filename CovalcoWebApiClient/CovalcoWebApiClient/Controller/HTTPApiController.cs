@@ -77,5 +77,18 @@ namespace CovalcoWebApiClient.Controller {
             return alumno;
         }
 
+        public static async void PutAlumnoById(int id, AlumnoViewModel alumno) {
+            try {
+                var contenido = JsonConvert.SerializeObject(alumno);
+                var buffer = Encoding.UTF8.GetBytes(contenido);
+                var byteContent = new ByteArrayContent(buffer);
+                byteContent.Headers.ContentType = new MediaTypeHeaderValue("application/json");
+                var result = await client.PutAsync(Resource.pathPutAlumnoById + id, byteContent);
+            } catch (Exception ex) {
+                Console.WriteLine(Resource.MensajeError);
+                throw ex;
+            }
+        }
+
     }
 }
