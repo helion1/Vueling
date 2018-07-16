@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CovalcoWebApi.Models
+namespace CovalcoWebApii.Models
 {
     using System;
     using System.Data.Entity;
