@@ -27,7 +27,6 @@ namespace Vueling.Application.Services.Service {
             .ReverseMap()
             .ForSourceMember(dest => dest.Edad, opt => opt.Ignore()));
 
-
             IMapper iMapper = config.CreateMapper();
 
             alumnoEntity = iMapper.Map<AlumnoDto, AlumnoEntity>(alumnoDto);

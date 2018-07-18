@@ -47,6 +47,7 @@ namespace Vueling.Facade.Api.Controllers
                 alumnoDtoInsertado = alumnoService.Add(alumnoDto);
             } catch (VuelingException e) {
                 //Return mejor HTTP error.
+                return InternalServerError();
             }
 
             return CreatedAtRoute("DefaultApi", 
