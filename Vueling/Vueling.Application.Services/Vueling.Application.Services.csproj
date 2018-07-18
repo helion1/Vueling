@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\AlumnoService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Vueling.Application.Dto\Vueling.Application.Dto.csproj">
