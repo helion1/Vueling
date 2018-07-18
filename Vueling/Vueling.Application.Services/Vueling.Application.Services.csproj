@@ -30,8 +30,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper, Version=7.0.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.7.0.1\lib\net45\AutoMapper.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net461\System.ValueTuple.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -60,6 +67,17 @@
       <Project>{c4748c7a-e7b1-47ea-bcdb-bcd4c1682643}</Project>
       <Name>Vueling.Domain.Entities</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Vueling.Infrastructure.Repository.Contracts\Vueling.Infrastructure.Repository.Contracts.csproj">
+      <Project>{400bcbae-e5d8-4440-9719-d181aeea8359}</Project>
+      <Name>Vueling.Infrastructure.Repository.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Vueling.Infrastructure.Repository\Vueling.Infrastructure.Repository.csproj">
+      <Project>{853c9a56-46ff-49af-8aa6-7eb61307ef13}</Project>
+      <Name>Vueling.Infrastructure.Repository</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

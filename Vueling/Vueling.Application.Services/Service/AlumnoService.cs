@@ -6,10 +6,17 @@ using System.Threading.Tasks;
 using Vueling.Application.Dto;
 using Vueling.Application.Services.Contracts;
 using Vueling.Domain.Entities;
+using Vueling.Infrastructure.Repository.Contracts;
+using Vueling.Infrastructure.Repository.Repository;
 
 namespace Vueling.Application.Services.Service {
     public class AlumnoService : IService<AlumnoDto> {
-        public AlumnoService() { }
+        private readonly IRepository<AlumnoEntity> iRepository;
+
+        public AlumnoService() : this(new AlumnoRepository()) { }
+        public AlumnoService(AlumnoRepository alumnoRepository) {
+            this.iRepository = alumnoRepository;
+        }
 
         public AlumnoDto Add(AlumnoDto model) {
             throw new NotImplementedException();
