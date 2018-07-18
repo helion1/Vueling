@@ -20,17 +20,20 @@ namespace Vueling.Application.Services.Service {
         }
         //El AlumnoDto que recibe es sin id, y reenvia otro con id.
         public AlumnoDto Add(AlumnoDto alumnoDto) {
-            AlumnoEntity alumnoEntity = new AlumnoEntity();
+            AlumnoEntity alumnoEntity = null;
 
             var config = new MapperConfiguration(cfg => cfg.CreateMap<AlumnoDto, AlumnoEntity>()
-            .ForMember(dest => dest.Edad, sou => sou.ResolveUsing(entity => DateTime.Today.AddTicks(-entity.FechaNacimiento.Ticks).Year - 1)));
+            .ForMember(dest => dest.Edad, sou => sou.MapFrom(entity => DateTime.Today.AddTicks(-entity.FechaNacimiento.Ticks).Year - 1))
+            .ReverseMap()
+            .ForSourceMember(dest => dest.Edad, opt => opt.Ignore()));
+
 
             IMapper iMapper = config.CreateMapper();
 
             alumnoEntity = iMapper.Map<AlumnoDto, AlumnoEntity>(alumnoDto);
-            iRepository.Add(alumnoEntity);
+            AlumnoEntity alumnoEntityConId = iRepository.Add(alumnoEntity);
 
-            return alumnoDto;
+            return iMapper.Map<AlumnoEntity, AlumnoDto>(alumnoEntityConId);
 
         }
 

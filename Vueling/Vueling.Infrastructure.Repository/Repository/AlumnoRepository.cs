@@ -13,8 +13,15 @@ using Vueling.Infrastructure.Repository.DataModel;
 namespace Vueling.Infrastructure.Repository.Repository {
     public class AlumnoRepository : IRepository<AlumnoEntity> {
 
+        private AlumnoEntity db = new AlumnoEntity();
+
+        public AlumnoRepository() {
+        }
+
         public AlumnoEntity Add(AlumnoEntity model) {
             try {
+                db.Alumno.Add(alumno);
+                db.SaveChanges();
                 throw new NotImplementedException();
             }  catch (DbUpdateConcurrencyException e) {
                 //YOU MUST LOG

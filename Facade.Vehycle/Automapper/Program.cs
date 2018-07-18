@@ -39,7 +39,7 @@ namespace Automapper {
             };
 
             var destino = iMapper.Map<Modelo1, Modelo2>(source);
-
+            
 
             Console.WriteLine(destino.GetType());
             Console.WriteLine("Author Name: " + destino.FullName + "\nEdad:" + destino.Age);
