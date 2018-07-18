@@ -22,7 +22,7 @@ namespace Vueling.Application.Services.Service {
             throw new NotImplementedException();
         }
 
-        public List<AlumnoDto> GetAll() {
+        public IQueryable<AlumnoDto> Get() {
             throw new NotImplementedException();
         }
 

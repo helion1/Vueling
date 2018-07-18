@@ -12,6 +12,7 @@ using Vueling.Infrastructure.Repository.DataModel;
 
 namespace Vueling.Infrastructure.Repository.Repository {
     public class AlumnoRepository : IRepository<AlumnoEntity> {
+
         public AlumnoEntity Add(AlumnoEntity model) {
             try {
                 throw new NotImplementedException();
