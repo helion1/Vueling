@@ -9,12 +9,12 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{84CCBF79-7207-4924-A1D8-0DFA11C50A44}</ProjectGuid>
+    <ProjectGuid>{96E96189-D6B8-4816-BB30-3EA5ED77798B}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CovalcoWebApii</RootNamespace>
-    <AssemblyName>CovalcoWebApii</AssemblyName>
+    <RootNamespace>WebApiCovalco</RootNamespace>
+    <AssemblyName>WebApiCovalco</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
@@ -341,9 +341,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>52924</DevelopmentServerPort>
+          <DevelopmentServerPort>56994</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:52924/</IISUrl>
+          <IISUrl>http://localhost:56994/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

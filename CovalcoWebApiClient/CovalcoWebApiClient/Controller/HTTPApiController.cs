@@ -25,12 +25,9 @@ namespace CovalcoWebApiClient.Controller {
             IEnumerable<AlumnoViewModel> listaAlumnos = new List<AlumnoViewModel>();
             try {
                 HttpResponseMessage response = client.GetAsync(Resource.pathGetAllAlumnos).Result;
+
                 if (response.IsSuccessStatusCode) {
-                    Console.WriteLine("Response message information:- \n\n" + response.RequestMessage + "\n");
-                    Console.WriteLine("Response message Header:- \n\n" + response.Content.Headers + "\n");
-                    //GET THE RESPONSE
                     var alumnoJsonString = await response.Content.ReadAsStringAsync();
-                    Console.WriteLine("Your response data is: " + alumnoJsonString);
                     var deserialized = JsonConvert.DeserializeObject<IEnumerable<AlumnoViewModel>>(alumnoJsonString);
                     listaAlumnos = deserialized;
                 }
@@ -86,15 +83,10 @@ namespace CovalcoWebApiClient.Controller {
             }
         }
 
+
         public static async void DeleteAlumnoById(int id) {
-            AlumnoViewModel alumno = new AlumnoViewModel();
             try {
                 HttpResponseMessage response = client.DeleteAsync(Resource.pathDeleteAlumnoById + id).Result;
-                if (response.IsSuccessStatusCode) {
-                    var alumnoJsonString = await response.Content.ReadAsStringAsync();
-                    var deserialized = JsonConvert.DeserializeObject<AlumnoViewModel>(alumnoJsonString);
-                    alumno = deserialized;
-                }
             } catch (Exception e) {
                 Console.WriteLine(Resource.MensajeError);
                 throw e;
