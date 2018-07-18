@@ -4,9 +4,11 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Description;
 using Vueling.Application.Dto;
 using Vueling.Application.Services.Contracts;
 using Vueling.Application.Services.Service;
+using Vueling.Common.Layer;
 
 namespace Vueling.Facade.Api.Controllers
 {
@@ -32,8 +34,23 @@ namespace Vueling.Facade.Api.Controllers
         }
 
         // POST: api/AlumnoApi
-        public int Post(AlumnoDto alumnoDto) {
-            return alumnoService.Add(alumnoDto).Id;
+        [ResponseType(typeof(AlumnoDto))]
+        public IHttpActionResult Post(AlumnoDto alumnoDto) {
+
+            if (!ModelState.IsValid) {
+                return BadRequest(ModelState);
+            }
+
+            AlumnoDto alumnoDtoInsertado = new AlumnoDto();
+
+            try {
+                alumnoDtoInsertado = alumnoService.Add(alumnoDto);
+            } catch (VuelingException e) {
+                //Return mejor HTTP error.
+            }
+
+            return CreatedAtRoute("DefaultApi", 
+                new { id = alumnoDtoInsertado.Id }, alumnoDtoInsertado);
         }
 
         // PUT: api/AlumnoApi/5
