@@ -18,5 +18,8 @@ namespace Vueling.Infrastructure.Repository.DataModel
         public string Nombre { get; set; }
         public string Apellidos { get; set; }
         public string Dni { get; set; }
+        public System.DateTime FechaDeNacimiento { get; set; }
+        public int Edad { get; set; }
+        public byte[] Timestamp { get; set; }
     }
 }

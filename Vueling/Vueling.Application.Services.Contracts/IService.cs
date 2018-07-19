@@ -8,7 +8,7 @@ namespace Vueling.Application.Services.Contracts {
     public interface IService<T> {
         T Add(T model);
         T Update(T model);
-        IQueryable<T> Get();
+        List<T> Get();
         int Remove(int id);
         T GetById(int id);
 

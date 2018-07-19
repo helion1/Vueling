@@ -11,7 +11,5 @@ namespace Vueling.Infrastructure.Repository.Contracts {
         List<T> GetAll();
         int Remove(int id);
         T GetById(int id);
-        
-        
     }
 }

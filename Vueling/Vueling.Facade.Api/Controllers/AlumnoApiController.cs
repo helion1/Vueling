@@ -24,7 +24,7 @@ namespace Vueling.Facade.Api.Controllers
 
 
         // GET: api/AlumnoApi
-        public IQueryable<AlumnoDto> Get(){
+        public List<AlumnoDto> Get(){
             return alumnoService.Get();
         }
 

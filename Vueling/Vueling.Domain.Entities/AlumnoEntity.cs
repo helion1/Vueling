@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Vueling.Domain.Entities {
-    public class AlumnoEntity : DbContext {
+    public class AlumnoEntity  {
         public AlumnoEntity() {
         }
 
