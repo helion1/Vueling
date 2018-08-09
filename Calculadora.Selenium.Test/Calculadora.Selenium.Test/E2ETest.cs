@@ -13,8 +13,8 @@ namespace Vueling.Facade.ApiTests2.Controllers {
     [TestClass]
     public class RateApiControllerSeleniumTest {
         private static IWebDriver Driver;
-        private static readonly String base_url = ConfigurationManager.AppSettings["baseUrl"]
-                                        + ConfigurationManager.AppSettings["UrlGetAllRates"];
+        private static readonly String base_url = ConfigurationManager.AppSettings["baseUrl"];
+                                        
 
         [AssemblyInitialize]
         public static void AssemblyInit(TestContext context) {
@@ -35,11 +35,7 @@ namespace Vueling.Facade.ApiTests2.Controllers {
         [TestMethod]
         public void SeleniumTestUsingCSharp() {
             var title = Driver.FindElement(By.Id("title"));
-
-            var substraction = Driver.FindElement(By.Id("substraction"));
-            var division = Driver.FindElement(By.Id("division"));
-            var multiply = Driver.FindElement(By.Id("multiply"));
-
+            
             //TITLE
             Assert.AreEqual(title.Text, "Calculadora");
 
